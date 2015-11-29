@@ -2,13 +2,15 @@
 
 \pagestyle{empty}
 
-\usepackage{hyperref}
 \usepackage{geometry}
 \usepackage[resetfonts]{cmap} 
 \usepackage{lmodern} 
 \usepackage[czech]{babel}
 \usepackage[latin2]{inputenc} 
 \usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{hyperref}
 
 \def\name{Adéla ©tromajerová}
 
@@ -38,13 +40,17 @@
 \setlength\parindent{0em}
 
 \begin{document}
-\pagenumbering{gobble}
 
-\centerline{\huge \bf \name}
+\begin{wrapfigure}{r}{0.25\textwidth}
+    \raggedleft
+    \includegraphics[width=0.9in]{photo_CV}
+\end{wrapfigure}
+
+{\huge \bf \name}
 
 \vspace{0.40in}
 
-\parbox{0.9\textwidth}{ 
+\parbox{1.0\textwidth}{ 
 \begin{tabbing}
 \hspace{3,5cm} \= \hspace{4cm} \= \kill
 {\bf Datum narození} \> 13. 10. 1990 \\ 
