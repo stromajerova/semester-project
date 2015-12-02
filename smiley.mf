@@ -1,0 +1,16 @@
+mode_setup;
+u#:=4/9pt#;
+define_pixels(u);
+beginchar("S", 16u#, 16u#, 0);"Smiley";
+  z1 = ( 4u,  12u);
+  z2 = ( 12u,  12u);
+  z3 = ( 1u,  8u);
+  z4 = ( 8u,  1u);
+  z5 = ( 15u,  8u);
+  pickup pencircle scaled 40u#;
+  drawdot z1;
+  drawdot z2;
+  pickup pencircle scaled 12u#;
+  draw z3..z4..z5;
+endchar;
+end
