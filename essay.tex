@@ -1,0 +1,80 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[resetfonts]{cmap} 
+\usepackage{lmodern} 
+\usepackage[czech]{babel}
+\usepackage[latin2]{inputenc} 
+\usepackage{tgpagella}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage[style=numeric, backend=biber]{biblatex}
+\addbibresource{bibli.bib}
+
+\def\name{Adéla ©tromajerová}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  citecolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {paralelní korpus, Wikipedie},
+  pdftitle = {Paralelní korpus z~Wikipedie},
+  pdfpagemode = UseNone
+}
+
+\setlength{\parindent}{3em}
+\linespread{1.3}
+
+\geometry{
+  left=1.0in,
+  top=1.0in,
+  bottom=1.0in
+}
+
+\usepackage{sectsty}
+\sectionfont{\large\noindent\bf}
+
+\begin{document}
+
+\begin{center}
+
+{\bf \huge Paralelní korpus z~Wikipedie} \\
+
+\vspace{0.15in}
+
+{\bf \Large \name} \\
+
+\end{center}
+
+\vspace{0.15in}
+
+\section*{Zadání práce}
+
+\noindent Cílem práce je sestavit paralelní korpus na základì takových editací Wikipedie, které prokazatelnì pøebírají a~jsou pøeklady textù z~jiných jazykových mutací Wikipedie. Èasto se pøekládají i~celé stránky z~anglické do èeské Wikipedie a~v~takových pøípadech musí být toto pøevzetí správnì indikováno. Vy¾aduje to jak licence Wikipedie, tak editorská kultura.
+
+Úkoly. Student se seznámí se strukturou databáze Wikipedie, zejména se systémem pro správu verzí stránek. Pomocí skriptù extrahuje v¹echny takové editace, které jsou prokazatelnì pøeklady a~vytvoøí z~nich zarovnané texty. Hlavní jazykový pár bude angliètina a~èe¹tina, nicménì skripty by mìly umìt extrahovat paralelní data i~pro jiné jazykové páry. Takto extrahované texty následnì student upraví do podoby zarovnaných vertikálních souborù, ze kterých se vytvoøí paralelní korpus pro nástroj Sketch Engine, který se vyvíjí ve spolupráci s~Centrem pro zpracování pøirozeného jazyka na Fakultì informatiky. Tímto se výsledný korpus zpøístupní u¾ivatelùm na Masarykovì univerzitì.
+
+Práce bude psána anglicky.
+
+\vspace{0.15in}
+
+\section*{Souèasný stav problematiky}
+
+\noindent Korpusová lingvistika je v~dne¹ní dobì zajímavým a~slibným oborem. Korpusy jsou obecnì pova¾ovány za velmi cenné nástroje a~jsou hojnì pou¾ívány napø. na poli zpracování pøirozeného jazyka (NLP -- natural language processing) jako nedocenitelné zdroje dat. V~urèitých podoborech NLP se pou¾ívají specifické druhy korpusù. Pro statistický strojový pøeklad (SMT -- statistical machine translation) jsou napøíklad nezbytné korpusy paralelní. 
+
+Paralelní korpus se skládá ze dvou nebo více korpusù v~rùzných jazycích. Tyto korpusy obsahují buï texty, které byly pøelo¾eny z~jednoho jazyka do druhého, nebo texty, které byly vytvoøeny simultánnì ve více jazycích~\cite{hunston}. Pou¾ívanìj¹í jsou korpusy obsahující simultánnì vytvoøené texty. Tyto texty obvykle pocházejí z~komunikace ve vícejazyèných komunitách, napø. z~Organizace spojených národù, Evropské unie nebo Kanady~\cite{ilc}.  Otevøený paralelní korpus OPUS napøíklad obsahuje paralelní korpus Europarl, který se skládá z~textù, je¾ byly poøízeny ve 21 jazycích pøi jednáních v~Evropském parlamentu~\cite{europarl}. Dal¹í paralelní korpus, The Canadian Hansard Corpus, sestává z~debat kanadského parlamentu, které byly uveøejnìny v~úøedních jazycích zemì, v~angliètinì a~francouz¹tinì~\cite{hansard}.
+
+Takovéto korpusy lze pou¾ít v~mnoha oborech. Pou¾ívají je pøekladatelé nebo napø. uèitelé a~jejich studenti k~vyhledání urèitých výrazù, zji¹tìní, jak se tyto výrazy pou¾ívají, a~ke zkoumání rozdílù mezi jazyky~\cite{hunston}. Hojnì se také pou¾ívají pro SMT, kde slou¾í jako zdroje trénovacích dat. Jeliko¾ je SMT stále dùle¾itìj¹í, nabývají na dùle¾itosti i~paralelní korpusy, bez kterých by SMT nemohl fungovat a~nemohl by se dále vyvíjet. Vý¹e zmínìný Europarl byl napøíklad vytvoøen pøímo pro potøeby SMT~\cite{europarl}. Paralelní korpusy se dále pou¾ívají na poli lexikografie, kde tím, ¾e poskytují reálné, neumìlé pøíklady jazyka, pomáhají k~tomu, aby slovníky lépe odrá¾ely stav jazyka a~jeho pou¾ití~\cite{lexicography}.
+
+K~vytvoøení paralelního korpusu je potøeba velké mno¾ství dat. Takováto data se v~dne¹ní dobì nacházejí na Internetu. Jedno z~míst, kde je mo¾né najít texty na stejné téma ve více jazycích, je Wikipedie, otevøená webová encyklopedie, která nabízí èlánky ze v¹ech mo¾ných oborù ve v¹ech mo¾ných jazycích. Wikipedie rychle roste, jeliko¾ pøispívat mù¾e v~podstatì ka¾dý a~mechanismus úprav a~tvorby èlánkù je jednoduchý a~intuitivní~\cite{wiki}. Wikipedie proto obsahuje texty, které nemusí slou¾it pouze jako informativní èlánky, ale také jako data pro mnoho aplikací. 
+
+V~minulosti ji¾ bylo z~Wikipedie vytvoøeno nìkolik korpusù. Zmínit mù¾eme napø. the Wikipedia Corpus, který obsahuje texty z~anglické Wikipedie~\cite{wikicorpus}. Existuje také nìkolik paralelní korpusù pocházejících z~Wikipedie, napø. èínsko-japonský paralelní korpus vytvoøený za úèelem zlep¹ení SMT mezi tìmito dvìma jazyky~\cite{chu}.
+
+Pøed samotným vytváøením paralelního korpusu z~Wikipedie je tøeba identifikovat, které dvojice èlánkù jsou pøeklady. Toto je jednoduché, jeliko¾ v¹echny pøelo¾ené èlánky na Wikipedii musí obsahovat formuli, která je jako pøelo¾ené oznaèuje, a~pøelo¾ený èlánek také musí obsahovat odkaz na èlánek pùvodní~\cite{wikitranslation}. Pøeklady na Wikipedii jsou vìt¹inou z~angliètiny do ostatních jazykù, aèkoli samozøejmì existují èlánky, specifické pro urèitou zemi, které jsou poté, co témata v~nich obsa¾ené nabudou na dùle¾itosti, pøelo¾eny do angliètiny, popø. jiných jazykù. 
+
+Èesko-anglický pár je obsa¾en v~paralelním korpusu Europarl. Nicménì, pokrytí tohoto jazykového páru by mohlo být lep¹í. Vytvoøením paralelního korpusu z~èeských a~anglických verzí tého¾ èlánku na Wikipedii mù¾eme pomoci zlep¹it SMT mezi tìmito dvìma jazyky a~také poskytnout dal¹í zdroje znalostí lexikografùm, pøekladatelùm a~uèitelùm.
+
+\printbibliography
+
+\end{document}
