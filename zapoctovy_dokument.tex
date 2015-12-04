@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[resetfonts]{cmap}
+\usepackage{lmodern}
+\usepackage[czech]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+\usepackage[unicode]{hyperref}
+
+\begin{document}
+\shorthandoff{-} 
+
+\hypersetup{
+        pdfauthor={Adéla ©tromajerová},
+        pdftitle={Zápoètový dokument},
+        pdfsubject={Zápoètový dokument},
+        pdfkeywords={cv, essay}
+} 
+
+\includepdf[pages=-]{cv.pdf}
+\includepdf[pages=-]{essay.pdf}
+
+\end{document}
